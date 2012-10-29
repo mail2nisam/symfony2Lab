@@ -1,0 +1,58 @@
+Application\AppBundle\Entity\AffBulkImport:
+    type: entity
+    table: aff_bulk_import
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        affiliateuserid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliateUserID
+        commission:
+            type: decimal
+            nullable: false
+        addeddate:
+            type: datetime
+            nullable: false
+            column: addedDate
+        campaignlistid:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: campaignListID
+        campaignlistname:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: campaignListName
+        mailsendstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: mailSendStatus
+        cities:
+            type: text
+            nullable: false
+        type:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+        mailscheduledate:
+            type: datetime
+            nullable: false
+            column: mailScheduleDate
+        importlog:
+            type: text
+            nullable: false
+            column: importLog
+    lifecycleCallbacks: {  }

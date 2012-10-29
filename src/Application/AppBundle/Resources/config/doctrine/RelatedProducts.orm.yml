@@ -1,0 +1,23 @@
+Application\AppBundle\Entity\RelatedProducts:
+    type: entity
+    table: related_products
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        dealid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: dealID
+        relateddealid:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: relatedDealID
+    lifecycleCallbacks: {  }

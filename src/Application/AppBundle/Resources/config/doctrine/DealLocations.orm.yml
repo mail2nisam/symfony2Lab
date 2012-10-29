@@ -1,0 +1,32 @@
+Application\AppBundle\Entity\DealLocations:
+    type: entity
+    table: deal_locations
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        cityid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: cityID
+        locid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: locID
+    manyToOne:
+        dealid:
+            targetEntity: Deals
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                dealID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

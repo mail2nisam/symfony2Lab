@@ -1,0 +1,43 @@
+Application\AppBundle\Entity\BusinessReviews:
+    type: entity
+    table: business_reviews
+    fields:
+        id:
+            id: true
+            type: bigint
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        languageid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: languageID
+        usercomment:
+            type: text
+            nullable: false
+            column: userComment
+        userrevieweddate:
+            type: datetime
+            nullable: false
+            column: userReviewedDate
+    manyToOne:
+        userid:
+            targetEntity: Users
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                userID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        businessid:
+            targetEntity: Business
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                businessID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,181 @@
+Application\AppBundle\Entity\Users:
+    type: entity
+    table: users
+    fields:
+        id:
+            id: true
+            type: bigint
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        usertypeid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: userTypeID
+        username:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: userName
+        useremail:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: userEmail
+        userpassword:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: userPassword
+        userfirstname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: userFirstName
+        userlastname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: userLastName
+        userphone:
+            type: string
+            length: 25
+            fixed: false
+            nullable: false
+            column: userPhone
+        userregistreddate:
+            type: datetime
+            nullable: false
+            column: userRegistredDate
+        userlastaccessed:
+            type: datetime
+            nullable: false
+            column: userLastAccessed
+        usernewslettermode:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: userNewsLetterMode
+        useradress1:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: userAdress1
+        useradress2:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: userAdress2
+        usercity:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: userCity
+        userprovince:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: userProvince
+        userzip:
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: userZip
+        usergroupid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: userGroupID
+        userreferralid:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: userReferralID
+        userprofilepicture:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: userProfilePicture
+        userdob:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: userDOB
+        usergender:
+            type: string
+            length: null
+            fixed: false
+            nullable: true
+            column: userGender
+        userlogintype:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: userLoginType
+        userstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: userStatus
+        userlockeddate:
+            type: datetime
+            nullable: false
+            column: userLockedDate
+        userinvalidaccesscount:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: userInvalidAccessCount
+        usernewslettersubscribestatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: userNewsletterSubscribeStatus
+        userdefaultlanguage:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: userDefaultLanguage
+        usersUserId:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: users_user_id
+    manyToOne:
+        countryid:
+            targetEntity: Countries
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                countryID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        stateid:
+            targetEntity: States
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                stateID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

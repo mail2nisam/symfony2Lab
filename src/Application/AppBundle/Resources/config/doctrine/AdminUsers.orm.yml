@@ -1,0 +1,80 @@
+Application\AppBundle\Entity\AdminUsers:
+    type: entity
+    table: admin_users
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        adminuserfirstname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: adminUserFirstName
+        adminuserlastname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: adminUserLastName
+        adminuseremail:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: adminUserEmail
+        adminuserloginname:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: adminUserLoginName
+        adminuserloginpass:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: adminUserLoginPass
+        adminuserstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: adminUserStatus
+        adminuseraccesscount:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: adminUserAccessCount
+        adminuserinvalidaccesscount:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: adminUserInvalidAccessCount
+        adminuserlockeddate:
+            type: datetime
+            nullable: false
+            column: adminUserLockedDate
+        adminusercreateddate:
+            type: datetime
+            nullable: false
+            column: adminUserCreatedDate
+        adminuserlastaccessdate:
+            type: datetime
+            nullable: false
+            column: adminUserLastAccessDate
+    manyToOne:
+        usertypeid:
+            targetEntity: AdminUserType
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                userTypeID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

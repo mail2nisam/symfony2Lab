@@ -1,0 +1,75 @@
+Application\AppBundle\Entity\PaymentSettings:
+    type: entity
+    table: payment_settings
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        paysetlabel:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: paySetLabel
+        paysetkey:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: paySetKey
+        paysettype:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: paySetType
+        paysetoptions:
+            type: text
+            nullable: false
+            column: paySetOptions
+        paysetvalue:
+            type: text
+            nullable: false
+            column: paySetValue
+        paysetvalidate:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: paySetValidate
+        paysetdescription:
+            type: text
+            nullable: false
+            column: paySetDescription
+        paysetsortorder:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: paySetSortOrder
+        paysetvalidateerror:
+            type: string
+            length: 500
+            fixed: false
+            nullable: true
+            column: paySetValidateError
+        payfieldshow:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: payFieldShow
+    manyToOne:
+        paysetgroupid:
+            targetEntity: PaymentSettingsGroup
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                paySetGroupID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

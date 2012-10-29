@@ -1,0 +1,86 @@
+Application\AppBundle\Entity\AffiliateWidgetDetails:
+    type: entity
+    table: affiliate_widget_details
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        widgetname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: widgetName
+        widgetdealcategories:
+            type: text
+            nullable: false
+            column: widgetDealCategories
+        widgetcities:
+            type: text
+            nullable: false
+            column: widgetCities
+        widgettype:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: widgetType
+        affiliatedealsizeid:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: affiliateDealSizeID
+        affiliateuserid:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: affiliateUserID
+        languageid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: languageID
+        affiliatewidgetcontenttype:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: affiliateWidgetContentType
+        widgetcolors:
+            type: text
+            nullable: false
+            column: widgetColors
+        affiliatewidgetcreateddate:
+            type: datetime
+            nullable: false
+            column: affiliateWidgetCreatedDate
+        affiliatewidgetotherdealtypes:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: affiliateWidgetOtherDealTypes
+        widgetscrolling:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: widgetScrolling
+        widgetFormat:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: widget_format
+        widgetstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: widgetStatus
+    lifecycleCallbacks: {  }

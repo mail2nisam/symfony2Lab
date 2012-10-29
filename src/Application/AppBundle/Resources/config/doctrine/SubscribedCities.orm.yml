@@ -1,0 +1,45 @@
+Application\AppBundle\Entity\SubscribedCities:
+    type: entity
+    table: subscribed_cities
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        subscribeddate:
+            type: datetime
+            nullable: false
+            column: subscribedDate
+        subscstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: subscStatus
+        unsubscrdate:
+            type: datetime
+            nullable: false
+            column: unsubscrDate
+    manyToOne:
+        subscid:
+            targetEntity: Subscribers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                subscID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        cityid:
+            targetEntity: Cities
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                cityID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

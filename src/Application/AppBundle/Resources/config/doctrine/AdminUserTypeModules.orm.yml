@@ -1,0 +1,26 @@
+Application\AppBundle\Entity\AdminUserTypeModules:
+    type: entity
+    table: admin_user_type_modules
+    fields:
+        id:
+            id: true
+            type: bigint
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        adminmoduleid:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: adminModuleID
+    manyToOne:
+        usertypeid:
+            targetEntity: AdminUserType
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                userTypeID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,174 @@
+Application\AppBundle\Entity\VisitorInfoLog:
+    type: entity
+    table: visitor_info_log
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        entrypage:
+            type: string
+            length: 765
+            fixed: false
+            nullable: false
+            column: entryPage
+        entrytime:
+            type: datetime
+            nullable: false
+            column: entryTime
+        exitpage:
+            type: string
+            length: 765
+            fixed: false
+            nullable: false
+            column: exitPage
+        exittime:
+            type: datetime
+            nullable: false
+            column: exitTime
+        useragent:
+            type: string
+            length: 765
+            fixed: false
+            nullable: false
+            column: userAgent
+        browsername:
+            type: string
+            length: 765
+            fixed: false
+            nullable: false
+            column: browserName
+        operatingsystem:
+            type: string
+            length: 765
+            fixed: false
+            nullable: false
+            column: operatingSystem
+        httpreferer:
+            type: string
+            length: 765
+            fixed: false
+            nullable: false
+            column: httpReferer
+        remoteaddress:
+            type: string
+            length: 765
+            fixed: false
+            nullable: false
+            column: remoteAddress
+        serveraddress:
+            type: string
+            length: 765
+            fixed: false
+            nullable: false
+            column: serverAddress
+        userid:
+            type: string
+            length: 11
+            fixed: false
+            nullable: false
+            column: userID
+        logintime:
+            type: datetime
+            nullable: false
+            column: loginTime
+        logouttime:
+            type: datetime
+            nullable: false
+            column: logoutTime
+        usertype:
+            type: string
+            length: 125
+            fixed: false
+            nullable: false
+            column: userType
+        searchkeyword:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: searchKeyWord
+        searchenginename:
+            type: string
+            length: 175
+            fixed: false
+            nullable: false
+            column: searchEngineName
+        orderplaced:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: orderPlaced
+        orderamount:
+            type: decimal
+            nullable: false
+            column: orderAmount
+        donesubscribe:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: doneSubscribe
+        donesignup:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: doneSignUp
+        usersex:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: userSex
+        userage:
+            type: string
+            length: 25
+            fixed: false
+            nullable: false
+            column: userAge
+        pagecount:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: pageCount
+        city:
+            type: string
+            length: 765
+            fixed: false
+            nullable: false
+        country:
+            type: string
+            length: 175
+            fixed: false
+            nullable: false
+        referrertype:
+            type: string
+            length: 150
+            fixed: false
+            nullable: false
+            column: referrerType
+        referrerwebsite:
+            type: string
+            length: 125
+            fixed: false
+            nullable: false
+            column: referrerWebSite
+        widgetid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: widgetID
+        ismobileweb:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: isMobileWeb
+        languageid:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: languageID
+    lifecycleCallbacks: {  }

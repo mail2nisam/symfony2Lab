@@ -1,0 +1,126 @@
+Application\AppBundle\Entity\AffiliatesRequests:
+    type: entity
+    table: affiliates_requests
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        affiliatereqfirstname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateReqFirstName
+        affiliatereqlastname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateReqLastName
+        affiliatereqcontactperson:
+            type: string
+            length: 150
+            fixed: false
+            nullable: true
+            column: affiliateReqContactPerson
+        affiliatecompanyname:
+            type: string
+            length: 150
+            fixed: false
+            nullable: true
+            column: affiliateCompanyName
+        affiliatereqaddress1:
+            type: string
+            length: 150
+            fixed: false
+            nullable: true
+            column: affiliateReqAddress1
+        affiliatereqaddress2:
+            type: string
+            length: 150
+            fixed: false
+            nullable: true
+            column: affiliateReqAddress2
+        affiliatereqemail:
+            type: string
+            length: 150
+            fixed: false
+            nullable: true
+            column: affiliateReqEmail
+        affiliatereqphone:
+            type: string
+            length: 20
+            fixed: false
+            nullable: true
+            column: affiliateReqPhone
+        affiliatereqfax:
+            type: string
+            length: 20
+            fixed: false
+            nullable: true
+            column: affiliateReqFax
+        affiliatereqcity:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateReqCity
+        affiliatereqstateid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliateReqStateID
+        affiliatereqprovince:
+            type: string
+            length: 50
+            fixed: false
+            nullable: true
+            column: affiliateReqProvince
+        affiliatereqcountryid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliateReqCountryID
+        affiliatereqzipcode:
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: affiliateReqZipcode
+        affiliatereqtypeofwebsite:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateReqTypeofWebsite
+        affiliatereqwebsiteurl:
+            type: string
+            length: 150
+            fixed: false
+            nullable: true
+            column: affiliateReqWebsiteURL
+        affiliatereqcomments:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: affiliateReqComments
+        affiliatereqstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: affiliateReqStatus
+        affiliatereqdate:
+            type: datetime
+            nullable: false
+            column: affiliateReqDate
+        affiliaterequpdateddate:
+            type: datetime
+            nullable: false
+            column: affiliateReqUpdatedDate
+    lifecycleCallbacks: {  }

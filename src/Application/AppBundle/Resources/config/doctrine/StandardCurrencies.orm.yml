@@ -1,0 +1,36 @@
+Application\AppBundle\Entity\StandardCurrencies:
+    type: entity
+    table: standard_currencies
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        standardcurrencyname:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: standardCurrencyName
+        standardcurrencycode:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: standardCurrencyCode
+        standardcurrencysymbolleft:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: standardCurrencySymbolLeft
+        standardcurrencysymbolright:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: standardCurrencySymbolRight
+    lifecycleCallbacks: {  }

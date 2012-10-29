@@ -1,0 +1,78 @@
+Application\AppBundle\Entity\BusinessTransactions:
+    type: entity
+    table: business_transactions
+    fields:
+        id:
+            id: true
+            type: bigint
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        transactiontype:
+            type: string
+            length: null
+            fixed: false
+            nullable: true
+            column: transactionType
+        transactiongroup:
+            type: string
+            length: null
+            fixed: false
+            nullable: true
+            column: transactionGroup
+        businessid:
+            type: bigint
+            nullable: true
+            column: businessID
+        transactiondescription:
+            type: text
+            nullable: true
+            column: transactionDescription
+        transactionsubtotalamount:
+            type: decimal
+            nullable: true
+            column: transactionSubTotalAmount
+        transactioncommissionamount:
+            type: decimal
+            nullable: true
+            column: transactionCommissionAmount
+        transactionpaymentgatewaycharge:
+            type: decimal
+            nullable: true
+            column: transactionPaymentGatewayCharge
+        transactionotherservicecharge:
+            type: decimal
+            nullable: true
+            column: transactionOtherServiceCharge
+        transactiongrandtotalamount:
+            type: decimal
+            nullable: true
+            column: transactionGrandTotalAmount
+        transactiondate:
+            type: datetime
+            nullable: true
+            column: transactionDate
+        transactiondescrforbusiness:
+            type: text
+            nullable: false
+            column: transactionDescrForBusiness
+        dealid:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: dealID
+        orderid:
+            type: bigint
+            nullable: true
+            column: orderID
+        transactiontotalamount:
+            type: decimal
+            nullable: true
+            column: transactionTotalAmount
+        transactionviewed:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: transactionViewed
+    lifecycleCallbacks: {  }

@@ -1,0 +1,45 @@
+Application\AppBundle\Entity\CityLocations:
+    type: entity
+    table: city_locations
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        cityid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: cityID
+        citylocname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: cityLocName
+        cityloctips:
+            type: text
+            nullable: false
+            column: cityLocTips
+        cityloclat:
+            type: string
+            length: 25
+            fixed: false
+            nullable: false
+            column: cityLocLat
+        cityloclng:
+            type: string
+            length: 25
+            fixed: false
+            nullable: false
+            column: cityLocLng
+        citylocstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: cityLocStatus
+    lifecycleCallbacks: {  }

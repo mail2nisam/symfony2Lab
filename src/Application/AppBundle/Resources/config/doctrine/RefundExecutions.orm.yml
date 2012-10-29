@@ -1,0 +1,16 @@
+Application\AppBundle\Entity\RefundExecutions:
+    type: entity
+    table: refund_executions
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        refundexecutiondate:
+            type: datetime
+            nullable: false
+            column: refundExecutionDate
+    lifecycleCallbacks: {  }

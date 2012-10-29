@@ -1,0 +1,26 @@
+Application\AppBundle\Entity\AffiliatePaymentDetails:
+    type: entity
+    table: affiliate_payment_details
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        affiliatepaymenttransid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliatePaymentTransID
+        affiliatecommissionid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliateCommissionID
+        affiliatepaidamount:
+            type: decimal
+            nullable: false
+            column: affiliatePaidAmount
+    lifecycleCallbacks: {  }

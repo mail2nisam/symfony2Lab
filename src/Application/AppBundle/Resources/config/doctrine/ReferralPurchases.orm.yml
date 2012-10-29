@@ -1,0 +1,31 @@
+Application\AppBundle\Entity\ReferralPurchases:
+    type: entity
+    table: referral_purchases
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        referrerid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: referrerID
+        purchasedate:
+            type: datetime
+            nullable: false
+            column: purchaseDate
+    manyToOne:
+        orderid:
+            targetEntity: Orders
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                orderID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

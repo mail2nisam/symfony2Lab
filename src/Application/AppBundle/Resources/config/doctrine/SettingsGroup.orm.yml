@@ -1,0 +1,33 @@
+Application\AppBundle\Entity\SettingsGroup:
+    type: entity
+    table: settings_group
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        settingsgrouplabel:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: settingsGroupLabel
+        settingsgroupdescription:
+            type: text
+            nullable: false
+            column: settingsGroupDescription
+        settingsgroupkey:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: settingsGroupKey
+        settingsgroupsortorder:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: settingsGroupSortOrder
+    lifecycleCallbacks: {  }

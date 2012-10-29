@@ -1,0 +1,104 @@
+Application\AppBundle\Entity\AffiliateCommissionSettings:
+    type: entity
+    table: affiliate_commission_settings
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        affiliateuserid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliateUserID
+        enablesalescommission:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: enableSalesCommission
+        firstpurchasecommissiontype:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: firstPurchaseCommissionType
+        firstpurchasecommissionvalue:
+            type: decimal
+            nullable: false
+            column: firstPurchaseCommissionValue
+        recurringpurchasecommissiontype:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: recurringPurchaseCommissionType
+        recurringpurchasecommissionvalue:
+            type: decimal
+            nullable: false
+            column: recurringPurchaseCommissionValue
+        enabletiercommission:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: enableTierCommission
+        tiercommissionlevel:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: tierCommissionLevel
+        tiercommissiontype:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: tierCommissionType
+        tiercommissionvalue:
+            type: decimal
+            nullable: false
+            column: tierCommissionValue
+        subscriptioncommission:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: subscriptionCommission
+        subscriptioncommissionamount:
+            type: decimal
+            nullable: false
+            column: subscriptionCommissionAmount
+        registrationcommission:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: registrationCommission
+        registrationcommissionamount:
+            type: decimal
+            nullable: false
+            column: registrationCommissionAmount
+        bulksubscriberimport:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: bulkSubscriberImport
+        bulksubscriberimportcommission:
+            type: decimal
+            nullable: false
+            column: bulkSubscriberImportCommission
+        bulkuserimport:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: bulkUserImport
+        bulkuserimportcommission:
+            type: decimal
+            nullable: false
+            column: bulkUserImportCommission
+    lifecycleCallbacks: {  }

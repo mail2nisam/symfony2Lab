@@ -1,0 +1,34 @@
+Application\AppBundle\Entity\BusinessShippingHistory:
+    type: entity
+    table: business_shipping_history
+    fields:
+        id:
+            id: true
+            type: bigint
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        activitydate:
+            type: datetime
+            nullable: false
+            column: activityDate
+        comment:
+            type: text
+            nullable: false
+        notifycustomer:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: notifyCustomer
+        orderid:
+            type: bigint
+            nullable: false
+            column: orderID
+        shippingstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: shippingStatus
+    lifecycleCallbacks: {  }

@@ -1,0 +1,80 @@
+Application\AppBundle\Entity\Timezones:
+    type: entity
+    table: timezones
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        timezonename:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: timeZoneName
+        timezonedetail:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: timeZoneDetail
+        timezoneabbreviation:
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: timeZoneAbbreviation
+        timezonediff:
+            type: string
+            length: 10
+            fixed: false
+            nullable: true
+            column: timeZoneDiff
+        timezonediffdst:
+            type: string
+            length: 10
+            fixed: false
+            nullable: true
+            column: timeZoneDiffDST
+        timezonediffdefault:
+            type: string
+            length: 10
+            fixed: false
+            nullable: true
+            column: timeZoneDiffDefault
+        daylightsavingsdiff:
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: daylightSavingsDiff
+        dststartdate:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: dstStartDate
+        dstenddate:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: dstEndDate
+        priority:
+            type: integer
+            unsigned: false
+            nullable: true
+    manyToOne:
+        countryid:
+            targetEntity: Countries
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                countryID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

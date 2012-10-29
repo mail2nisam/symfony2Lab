@@ -1,0 +1,28 @@
+Application\AppBundle\Entity\SubscribedDealTypes:
+    type: entity
+    table: subscribed_deal_types
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        dealtypekey:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: dealTypeKey
+    manyToOne:
+        subscid:
+            targetEntity: Subscribers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                subscID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

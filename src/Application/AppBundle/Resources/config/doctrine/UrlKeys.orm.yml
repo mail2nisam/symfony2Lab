@@ -1,0 +1,36 @@
+Application\AppBundle\Entity\UrlKeys:
+    type: entity
+    table: url_keys
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        urlkey:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: urlKey
+        referancetable:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: referanceTable
+        referencefield:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: referenceField
+        referencefieldid:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: referenceFieldID
+    lifecycleCallbacks: {  }

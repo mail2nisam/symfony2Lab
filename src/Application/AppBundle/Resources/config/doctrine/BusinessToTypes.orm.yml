@@ -1,0 +1,31 @@
+Application\AppBundle\Entity\BusinessToTypes:
+    type: entity
+    table: business_to_types
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        businessid:
+            targetEntity: Business
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                businessID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        businesstypeid:
+            targetEntity: BusinessTypes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                businessTypeID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

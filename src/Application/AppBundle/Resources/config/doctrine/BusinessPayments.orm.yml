@@ -1,0 +1,107 @@
+Application\AppBundle\Entity\BusinessPayments:
+    type: entity
+    table: business_payments
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        businesstransdescription:
+            type: text
+            nullable: false
+            column: businessTransDescription
+        businesstransdate:
+            type: datetime
+            nullable: false
+            column: businessTransDate
+        totalamount:
+            type: decimal
+            nullable: false
+            column: totalAmount
+        commission:
+            type: decimal
+            nullable: false
+        servicefee:
+            type: decimal
+            nullable: false
+            column: serviceFee
+        cccharges:
+            type: decimal
+            nullable: false
+            column: ccCharges
+        otherdeduction:
+            type: decimal
+            nullable: false
+            column: otherDeduction
+        transactionamount:
+            type: decimal
+            nullable: false
+            column: transactionAmount
+        transactionstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: transactionStatus
+        transactiontype:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: transactionType
+        paymenttotal:
+            type: decimal
+            nullable: false
+            column: paymentTotal
+        paidcommission:
+            type: decimal
+            nullable: false
+            column: paidCommission
+        paidservicefee:
+            type: decimal
+            nullable: false
+            column: paidServiceFee
+        paidcccharges:
+            type: decimal
+            nullable: false
+            column: paidCcCharges
+        paidotherdeduction:
+            type: decimal
+            nullable: false
+            column: paidOtherDeduction
+        paidamount:
+            type: decimal
+            nullable: false
+            column: paidAmount
+    manyToOne:
+        orderid:
+            targetEntity: Orders
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                orderID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        businessid:
+            targetEntity: Business
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                businessID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        adminuserid:
+            targetEntity: AdminUsers
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                adminUserID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

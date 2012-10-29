@@ -1,0 +1,66 @@
+Application\AppBundle\Entity\DealOptions:
+    type: entity
+    table: deal_options
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        dealoptionname:
+            type: string
+            length: 511
+            fixed: false
+            nullable: false
+            column: dealOptionName
+        dealoptioncerttitle:
+            type: string
+            length: 511
+            fixed: false
+            nullable: true
+            column: dealOptionCertTitle
+        dealoptionregularprice:
+            type: decimal
+            nullable: false
+            column: dealOptionRegularPrice
+        dealoptiondealprice:
+            type: decimal
+            nullable: false
+            column: dealOptionDealPrice
+        dealoptionquantity:
+            type: string
+            length: 11
+            fixed: false
+            nullable: true
+            column: dealOptionQuantity
+        dealquantityunlimited:
+            type: string
+            length: 2
+            fixed: false
+            nullable: true
+            column: dealQuantityUnlimited
+        dealoptionstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: dealOptionStatus
+        dealoptiondefault:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: dealOptionDefault
+    manyToOne:
+        dealid:
+            targetEntity: Deals
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                dealID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

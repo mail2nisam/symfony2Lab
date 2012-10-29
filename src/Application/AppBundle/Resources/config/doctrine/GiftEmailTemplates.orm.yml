@@ -1,0 +1,24 @@
+Application\AppBundle\Entity\GiftEmailTemplates:
+    type: entity
+    table: gift_email_templates
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        gitemailtemplatetitle:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: gitEmailTemplateTitle
+        giftemailtemplateimage:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: giftEmailTemplateImage
+    lifecycleCallbacks: {  }

@@ -1,0 +1,81 @@
+Application\AppBundle\Entity\OrderShipping:
+    type: entity
+    table: order_shipping
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        orderid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: orderID
+        shippingfname:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: shippingFname
+        shippinglname:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: shippingLname
+        shippingcompany:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: shippingCompany
+        shippingaddress1:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: shippingAddress1
+        shippingaddress2:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: shippingAddress2
+        shippingcity:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: shippingCity
+        shippingzip:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: shippingZip
+        shippingcountryid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: shippingCountryID
+        shippingstateid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: shippingStateID
+        shippingprovince:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: shippingProvince
+        shippingmethod:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: shippingMethod
+    lifecycleCallbacks: {  }

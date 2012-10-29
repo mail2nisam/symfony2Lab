@@ -1,0 +1,39 @@
+Application\AppBundle\Entity\EmailTemplateSectons:
+    type: entity
+    table: email_template_sectons
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        sectionname:
+            type: string
+            length: 127
+            fixed: false
+            nullable: false
+            column: sectionName
+        sectionuniquestring:
+            type: string
+            length: 127
+            fixed: false
+            nullable: false
+            column: sectionUniqueString
+        languageid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: languageID
+        sectioncontent:
+            type: text
+            nullable: false
+            column: sectionContent
+        sectionstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: sectionStatus
+    lifecycleCallbacks: {  }

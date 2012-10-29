@@ -1,0 +1,214 @@
+Application\AppBundle\Entity\Deals:
+    type: entity
+    table: deals
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        istaxable:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: isTaxable
+        taxclassid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: taxClassID
+        taxrate:
+            type: decimal
+            nullable: true
+            column: taxRate
+        dealkey:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: dealKey
+        dealtitle:
+            type: string
+            length: 511
+            fixed: false
+            nullable: false
+            column: dealTitle
+        dealcertificatetitle:
+            type: string
+            length: 511
+            fixed: false
+            nullable: false
+            column: dealCertificateTitle
+        dealfineprint:
+            type: text
+            nullable: false
+            column: dealFinePrint
+        dealhighlights:
+            type: text
+            nullable: false
+            column: dealHighlights
+        dealdescription:
+            type: text
+            nullable: false
+            column: dealDescription
+        dealreviews:
+            type: text
+            nullable: false
+            column: dealReviews
+        certificateinstructions:
+            type: text
+            nullable: false
+            column: certificateInstructions
+        dealmetatitle:
+            type: text
+            nullable: false
+            column: dealMetaTitle
+        dealmetadescription:
+            type: text
+            nullable: false
+            column: dealMetaDescription
+        dealmetakeywords:
+            type: text
+            nullable: false
+            column: dealMetaKeywords
+        dealbusinesslocations:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: dealBusinessLocations
+        dealtimezone:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: dealTimeZone
+        dealstarttime:
+            type: datetime
+            nullable: false
+            column: dealStartTime
+        dealendtime:
+            type: datetime
+            nullable: false
+            column: dealEndTime
+        dealminbuylimit:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: dealMinBuyLimit
+        dealmaxgiftbuy:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: dealMaxGiftBuy
+        dealmaxbuylimit:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: dealMaxBuyLimit
+        dealminqntyreqtotipp:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: dealMinQntyReqToTipp
+        dealexpirydate:
+            type: datetime
+            nullable: false
+            column: dealExpiryDate
+        dealcommissionrate:
+            type: float
+            nullable: false
+            column: dealCommissionRate
+        dealuseglobalcommision:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: dealUseGlobalCommision
+        dealcommissiontype:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: dealCommissionType
+        dealservicefee:
+            type: float
+            nullable: false
+            column: dealServiceFee
+        dealshownosbought:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: dealShowNosBought
+        dealshowdealtipped:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: dealShowDealTipped
+        dealonlineredemption:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: dealOnlineRedemption
+        dealimage:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: dealImage
+        dealpriority:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: dealPriority
+        dealstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: dealStatus
+        inventorytracklevel:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: InventoryTrackLevel
+        dealcreateddate:
+            type: datetime
+            nullable: false
+            column: dealCreatedDate
+        dealtippeddate:
+            type: datetime
+            nullable: true
+            column: dealTippedDate
+        shippingstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: shippingStatus
+    manyToOne:
+        dealtypeid:
+            targetEntity: DealTypes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                dealTypeID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        businessid:
+            targetEntity: Business
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                businessID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,29 @@
+Application\AppBundle\Entity\PageName:
+    type: entity
+    table: page_name
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        pagename:
+            type: string
+            length: 175
+            fixed: false
+            nullable: false
+            column: pageName
+        pagekeyword:
+            type: string
+            length: 125
+            fixed: false
+            nullable: false
+            column: pageKeyword
+        contentid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: contentID
+    lifecycleCallbacks: {  }

@@ -1,0 +1,49 @@
+Application\AppBundle\Entity\CharityPayments:
+    type: entity
+    table: charity_payments
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        charityid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: charityID
+        adminuserid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: adminUserID
+        charitytransdescription:
+            type: text
+            nullable: false
+            column: charityTransDescription
+        charitytransdate:
+            type: datetime
+            nullable: false
+            column: charityTransDate
+        transactionamount:
+            type: decimal
+            nullable: false
+            column: transactionAmount
+        transactiontype:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: transactionType
+        orderid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: orderID
+        paidamount:
+            type: decimal
+            nullable: false
+            column: paidAmount
+    lifecycleCallbacks: {  }

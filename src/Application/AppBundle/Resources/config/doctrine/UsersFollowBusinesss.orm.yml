@@ -1,0 +1,35 @@
+Application\AppBundle\Entity\UsersFollowBusinesss:
+    type: entity
+    table: users_follow_businesss
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        followdate:
+            type: datetime
+            nullable: false
+            column: followDate
+    manyToOne:
+        userid:
+            targetEntity: Users
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                userID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        businessid:
+            targetEntity: Business
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                businessID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

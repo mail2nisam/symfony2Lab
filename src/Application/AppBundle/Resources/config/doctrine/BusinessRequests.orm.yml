@@ -1,0 +1,147 @@
+Application\AppBundle\Entity\BusinessRequests:
+    type: entity
+    table: business_requests
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        businesstypeother:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: businessTypeOther
+        businessreqname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: businessReqName
+        businessreqfirstname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: businessReqFirstName
+        businessreqlastname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: businessReqLastName
+        businessreqaddress1:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: businessReqAddress1
+        businessreqaddress2:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: businessReqAddress2
+        businessreqcity:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: businessReqCity
+        businessreqprovince:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: businessReqProvince
+        businessreqphone:
+            type: string
+            length: 20
+            fixed: false
+            nullable: true
+            column: businessReqPhone
+        businessreqzip:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+            column: businessReqZip
+        businessreqemail:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: businessReqEmail
+        businessreqwebsite:
+            type: string
+            length: 450
+            fixed: false
+            nullable: false
+            column: businessReqWebsite
+        businessreqcomments:
+            type: text
+            nullable: true
+            column: businessReqComments
+        periodofbusiness:
+            type: string
+            length: 20
+            fixed: false
+            nullable: true
+            column: PeriodofBusiness
+        hearabout:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: hearAbout
+        businessrequestdate:
+            type: datetime
+            nullable: false
+            column: businessRequestDate
+        businessreqstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: businessReqStatus
+        requpdatedate:
+            type: datetime
+            nullable: false
+            column: ReqUpdateDate
+        businessreqdefaultlanguageid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: businessReqDefaultLanguageID
+    manyToOne:
+        businessreqcountryid:
+            targetEntity: Countries
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                businessReqCountryID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        businessreqstateid:
+            targetEntity: States
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                businessReqStateID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        businesstypeid:
+            targetEntity: BusinessTypes
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                businessTypeID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

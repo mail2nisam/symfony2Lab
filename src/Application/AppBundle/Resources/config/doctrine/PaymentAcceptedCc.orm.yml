@@ -1,0 +1,35 @@
+Application\AppBundle\Entity\PaymentAcceptedCc:
+    type: entity
+    table: payment_accepted_cc
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        cardtypecode:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: cardTypeCode
+        cardtype:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: cardType
+        enablecvv2:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: enableCVV2
+        status:
+            type: string
+            length: null
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

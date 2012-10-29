@@ -1,0 +1,45 @@
+Application\AppBundle\Entity\UsersReferrals:
+    type: entity
+    table: users_referrals
+    fields:
+        id:
+            id: true
+            type: bigint
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        referedby:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: referedBY
+        referedto:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: referedTo
+        purchasestatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: purchaseStatus
+        referralamount:
+            type: decimal
+            nullable: false
+            column: referralAmount
+        referralstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: referralStatus
+        referalregactivedate:
+            type: datetime
+            nullable: true
+            column: referalRegActiveDate
+        lastactdate:
+            type: datetime
+            nullable: false
+            column: LastActDate
+    lifecycleCallbacks: {  }

@@ -1,0 +1,36 @@
+Application\AppBundle\Entity\ApiAccess:
+    type: entity
+    table: api_access
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        userapikey:
+            type: string
+            length: 110
+            fixed: false
+            nullable: false
+            column: userApiKey
+        lastaccess:
+            type: datetime
+            nullable: false
+            column: lastAccess
+        accesscount:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: accessCount
+        section:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+        accesstime:
+            type: datetime
+            nullable: false
+            column: accessTime
+    lifecycleCallbacks: {  }

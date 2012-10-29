@@ -1,0 +1,22 @@
+Application\AppBundle\Entity\CampaignCities:
+    type: entity
+    table: campaign_cities
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        campaignid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: campaignID
+        cityid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: cityID
+    lifecycleCallbacks: {  }

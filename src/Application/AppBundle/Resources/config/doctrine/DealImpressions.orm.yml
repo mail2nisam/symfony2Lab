@@ -1,0 +1,30 @@
+Application\AppBundle\Entity\DealImpressions:
+    type: entity
+    table: deal_impressions
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        dealid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: dealID
+        visitoridlist:
+            type: text
+            nullable: false
+            column: visitorIDList
+        thumbviewcount:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: thumbViewCount
+        visitdate:
+            type: date
+            nullable: false
+            column: visitDate
+    lifecycleCallbacks: {  }

@@ -1,0 +1,166 @@
+Application\AppBundle\Entity\Affiliates:
+    type: entity
+    table: affiliates
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        affiliateid:
+            type: string
+            length: 25
+            fixed: false
+            nullable: true
+            column: affiliateID
+        affiliatereqid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliateReqID
+        affiliateusername:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateUserName
+        affiliatepassword:
+            type: string
+            length: 50
+            fixed: false
+            nullable: true
+            column: affiliatePassword
+        affiliatefirstname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateFirstName
+        affiliatelastname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateLastName
+        affiliatecontactperson:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateContactPerson
+        affiliatecompanyname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateCompanyName
+        affiliateaddress1:
+            type: string
+            length: 150
+            fixed: false
+            nullable: true
+            column: affiliateAddress1
+        affiliateaddress2:
+            type: string
+            length: 150
+            fixed: false
+            nullable: true
+            column: affiliateAddress2
+        affiliateemail:
+            type: string
+            length: 150
+            fixed: false
+            nullable: true
+            column: affiliateEmail
+        affiliatephone:
+            type: string
+            length: 50
+            fixed: false
+            nullable: true
+            column: affiliatePhone
+        affiliatefax:
+            type: string
+            length: 50
+            fixed: false
+            nullable: true
+            column: affiliateFax
+        affiliatecity:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateCity
+        affiliatestateid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliateStateID
+        affiliatestateprovince:
+            type: string
+            length: 50
+            fixed: false
+            nullable: true
+            column: affiliateStateProvince
+        affiliatecountryid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliateCountryID
+        affiliatezipcode:
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: affiliateZipcode
+        affiliatetypeofwebsite:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateTypeofWebsite
+        affiliatewebsiteurl:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateWebsiteURL
+        affiliateaccounttype:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateAccountType
+        affiliateaccountname:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: affiliateAccountName
+        affiliateaccountdetails:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
+            column: affiliateAccountDetails
+        affiliatestatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: affiliateStatus
+        affiliateregisterdate:
+            type: datetime
+            nullable: false
+            column: affiliateRegisterDate
+        affiliatelastaccesed:
+            type: datetime
+            nullable: false
+            column: affiliateLastAccesed
+        preferredlanguage:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: preferredLanguage
+    lifecycleCallbacks: {  }

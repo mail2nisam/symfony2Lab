@@ -1,0 +1,30 @@
+Application\AppBundle\Entity\AffiliateReferralPurchases:
+    type: entity
+    table: affiliate_referral_purchases
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        affiliateuserid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: affiliateUserID
+        orderid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: orderID
+        commissionamount:
+            type: decimal
+            nullable: false
+            column: commissionAmount
+        commissionpercent:
+            type: decimal
+            nullable: false
+            column: commissionPercent
+    lifecycleCallbacks: {  }

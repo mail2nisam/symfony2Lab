@@ -1,0 +1,36 @@
+Application\AppBundle\Entity\CampaignAds:
+    type: entity
+    table: campaign_ads
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        adsize:
+            type: string
+            length: 9
+            fixed: false
+            nullable: false
+            column: adSize
+        campaignid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: campaignID
+        template:
+            type: string
+            length: 20
+            fixed: false
+            nullable: false
+        imagepath:
+            type: text
+            nullable: false
+            column: imagePath
+        imageattr:
+            type: text
+            nullable: false
+            column: imageAttr
+    lifecycleCallbacks: {  }

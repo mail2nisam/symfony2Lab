@@ -1,0 +1,85 @@
+Application\AppBundle\Entity\Settings:
+    type: entity
+    table: settings
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        settingslabel:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: settingsLabel
+        settingskey:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: settingsKey
+        settingstype:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: settingsType
+        settingsfieldtype:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: settingsFieldType
+        settingsdependants:
+            type: text
+            nullable: false
+            column: settingsDependants
+        settingsoptions:
+            type: text
+            nullable: false
+            column: settingsOptions
+        settingsvalue:
+            type: text
+            nullable: false
+            column: settingsValue
+        settingsvalidate:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: settingsValidate
+        settingsvalidateerror:
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            column: settingsValidateError
+        settingsdescription:
+            type: text
+            nullable: false
+            column: settingsDescription
+        settingssortorder:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: settingsSortOrder
+        settingssecure:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: settingsSecure
+    manyToOne:
+        settingsgroupid:
+            targetEntity: SettingsGroup
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                settingsGroupID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

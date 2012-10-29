@@ -1,0 +1,35 @@
+Application\AppBundle\Entity\ShippingRates:
+    type: entity
+    table: shipping_rates
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        dealid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: dealID
+        ratenational:
+            type: float
+            nullable: false
+            column: rateNational
+        rateinternational:
+            type: float
+            nullable: false
+            column: rateInternational
+        freeshippingminqty:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: freeShippingMinQty
+        shippingorigincountryid:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: shippingOriginCountryID
+    lifecycleCallbacks: {  }

@@ -1,0 +1,23 @@
+Application\AppBundle\Entity\PaymentSupportedCurrencies:
+    type: entity
+    table: payment_supported_currencies
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        currencycode:
+            type: string
+            length: 10
+            fixed: false
+            nullable: false
+            column: currencyCode
+        status:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

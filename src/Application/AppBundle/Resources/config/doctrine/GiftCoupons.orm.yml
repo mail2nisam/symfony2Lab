@@ -1,0 +1,101 @@
+Application\AppBundle\Entity\GiftCoupons:
+    type: entity
+    table: gift_coupons
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        giftfromname:
+            type: string
+            length: 126
+            fixed: false
+            nullable: true
+            column: giftFromName
+        couponto:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: couponTo
+        redeemedby:
+            type: integer
+            unsigned: false
+            nullable: true
+            column: redeemedBy
+        couponmessage:
+            type: text
+            nullable: false
+            column: couponMessage
+        couponcode:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: couponCode
+        couponamount:
+            type: decimal
+            nullable: false
+            column: couponAmount
+        couponemailto:
+            type: string
+            length: 200
+            fixed: false
+            nullable: false
+            column: couponEmailTo
+        couponstatus:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: couponStatus
+        sendmode:
+            type: string
+            length: null
+            fixed: false
+            nullable: false
+            column: sendMode
+        couponexpiry:
+            type: datetime
+            nullable: false
+            column: couponExpiry
+        redeemeddate:
+            type: datetime
+            nullable: true
+            column: redeemedDate
+        pdfdata:
+            type: blob
+            nullable: false
+            column: pdfData
+    manyToOne:
+        giftemailtemplateid:
+            targetEntity: GiftEmailTemplates
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                giftEmailTemplateID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        userid:
+            targetEntity: Users
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                userID:
+                    referencedColumnName: id
+            orphanRemoval: false
+        orderid:
+            targetEntity: Orders
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                orderID:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
