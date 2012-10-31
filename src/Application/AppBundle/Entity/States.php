@@ -136,4 +136,8 @@ class States
     {
         return $this->statestatus;
     }
+    public function __toString() {
+        return $this->getStatename();
+    }
+
 }

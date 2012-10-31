@@ -35,17 +35,7 @@ class Users extends BaseUser
      */
     private $userphone;
 
-    /**
-     * @var \DateTime $userregistreddate
-     */
-    private $userregistreddate;
-    
-    /**
-     * @var string $usernewslettermode
-     */
-    private $usernewslettermode;
-
-    /**
+   /**
      * @var string $useradress1
      */
     private $useradress1;
@@ -81,11 +71,6 @@ class Users extends BaseUser
     private $userzip;
 
     /**
-     * @var integer $usergroupid
-     */
-    private $usergroupid;
-
-    /**
      * @var string $userreferralid
      */
     private $userreferralid;
@@ -106,25 +91,10 @@ class Users extends BaseUser
     private $usergender;
 
     /**
-     * @var string $userlogintype
-     */
-    private $userlogintype;
-        
-    /**
-     * @var integer $userinvalidaccesscount
-     */
-    private $userinvalidaccesscount;
-
-    /**
      * @var string $usernewslettersubscribestatus
      */
     private $usernewslettersubscribestatus;
 
-    /**
-     * @var integer $userdefaultlanguage
-     */
-    private $userdefaultlanguage;
-   
     /**
      * Get id
      *
@@ -135,30 +105,7 @@ class Users extends BaseUser
         return $this->id;
     }
 
-    /**
-     * Set usertypeid
-     *
-     * @param integer $usertypeid
-     * @return Users
-     */
-    public function setUsertypeid($usertypeid)
-    {
-        $this->usertypeid = $usertypeid;
-    
-        return $this;
-    }
-
-    /**
-     * Get usertypeid
-     *
-     * @return integer 
-     */
-    public function getUsertypeid()
-    {
-        return $this->usertypeid;
-    }
- 
-    /**
+   /**
      * Set userfirstname
      *
      * @param string $userfirstname
@@ -225,52 +172,6 @@ class Users extends BaseUser
     public function getUserphone()
     {
         return $this->userphone;
-    }
-
-    /**
-     * Set userregistreddate
-     *
-     * @param \DateTime $userregistreddate
-     * @return Users
-     */
-    public function setUserregistreddate($userregistreddate)
-    {
-        $this->userregistreddate = $userregistreddate;
-    
-        return $this;
-    }
-
-    /**
-     * Get userregistreddate
-     *
-     * @return \DateTime 
-     */
-    public function getUserregistreddate()
-    {
-        return $this->userregistreddate;
-    }
-
-    /**
-     * Set usernewslettermode
-     *
-     * @param string $usernewslettermode
-     * @return Users
-     */
-    public function setUsernewslettermode($usernewslettermode)
-    {
-        $this->usernewslettermode = $usernewslettermode;
-    
-        return $this;
-    }
-
-    /**
-     * Get usernewslettermode
-     *
-     * @return string 
-     */
-    public function getUsernewslettermode()
-    {
-        return $this->usernewslettermode;
     }
 
     /**
@@ -360,9 +261,9 @@ class Users extends BaseUser
      *
      * @return integer 
      */
-    public function getCountryid()
+    public function getCountryid(\Application\AppBundle\Entity\Countries $country=null)
     {
-        return $this->countryid;
+         $this->countryid = $country;return $this;
     }
 
     /**
@@ -435,29 +336,6 @@ class Users extends BaseUser
     }
 
     /**
-     * Set usergroupid
-     *
-     * @param integer $usergroupid
-     * @return Users
-     */
-    public function setUsergroupid($usergroupid)
-    {
-        $this->usergroupid = $usergroupid;
-    
-        return $this;
-    }
-
-    /**
-     * Get usergroupid
-     *
-     * @return integer 
-     */
-    public function getUsergroupid()
-    {
-        return $this->usergroupid;
-    }
-
-    /**
      * Set userreferralid
      *
      * @param string $userreferralid
@@ -519,7 +397,7 @@ class Users extends BaseUser
     /**
      * Get userdob
      *
-     * @return string 
+     * @return \DateTime 
      */
     public function getUserdob()
     {
@@ -548,53 +426,6 @@ class Users extends BaseUser
     {
         return $this->usergender;
     }
-
-    /**
-     * Set userlogintype
-     *
-     * @param string $userlogintype
-     * @return Users
-     */
-    public function setUserlogintype($userlogintype)
-    {
-        $this->userlogintype = $userlogintype;
-    
-        return $this;
-    }
-
-    /**
-     * Get userlogintype
-     *
-     * @return string 
-     */
-    public function getUserlogintype()
-    {
-        return $this->userlogintype;
-    }
-
-    /**
-     * Set userinvalidaccesscount
-     *
-     * @param integer $userinvalidaccesscount
-     * @return Users
-     */
-    public function setUserinvalidaccesscount($userinvalidaccesscount)
-    {
-        $this->userinvalidaccesscount = $userinvalidaccesscount;
-    
-        return $this;
-    }
-
-    /**
-     * Get userinvalidaccesscount
-     *
-     * @return integer 
-     */
-    public function getUserinvalidaccesscount()
-    {
-        return $this->userinvalidaccesscount;
-    }
-
     /**
      * Set usernewslettersubscribestatus
      *
@@ -617,27 +448,5 @@ class Users extends BaseUser
     {
         return $this->usernewslettersubscribestatus;
     }
-
-    /**
-     * Set userdefaultlanguage
-     *
-     * @param integer $userdefaultlanguage
-     * @return Users
-     */
-    public function setUserdefaultlanguage($userdefaultlanguage)
-    {
-        $this->userdefaultlanguage = $userdefaultlanguage;
     
-        return $this;
-    }
-
-    /**
-     * Get userdefaultlanguage
-     *
-     * @return integer 
-     */
-    public function getUserdefaultlanguage()
-    {
-        return $this->userdefaultlanguage;
-    }
   }

@@ -220,4 +220,8 @@ class Countries
     {
         return $this->addressformatid;
     }
+    public function __toString() {
+        return $this->getCountryname();   
+    }
+
 }
