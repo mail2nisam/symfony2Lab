@@ -1,3 +1,3 @@
-applicationuser_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: ApplicationuserBundle:Default:index }
+_selectStates:
+    pattern:  /selectstates
+    defaults: { _controller: ApplicationuserBundle:Default:_selectStates }

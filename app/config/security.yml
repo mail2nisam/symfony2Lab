@@ -11,23 +11,6 @@ security:
         FOS\UserBundle\Model\UserInterface: sha512
 
     firewalls:
-        admin:
-            switch_user:        true
-            context:            user
-            pattern:      /admin(.*)
-            form_login:
-                provider:       fos_userbundle
-                login_path:     /admin/login
-                use_forward:    false
-                check_path:     /admin/login_check
-                failure_path:   null
-                use_referer:    true
-                default_target_path: /admin/dashboard
-            logout:
-                path:           /admin/logout
-                target:         /admin/login
-            anonymous:    true          
-        # -> end custom configuration
         main:
             pattern: ^/
             form_login:

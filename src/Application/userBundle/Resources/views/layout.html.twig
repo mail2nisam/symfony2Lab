@@ -51,9 +51,9 @@
                     <div class="row-fluid">
                         <div class="span12 center login-header">
                             <h2>Welcome to *************</h2>
-                        </div><!--/span-->
+                        </div>
                     </div>
-                    <div>
+                   <!--/span<div>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
                             <a href="{{ path('fos_user_security_logout') }}">
@@ -62,7 +62,7 @@
             {% else %}
                                 <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
             {% endif %}
-                            </div>
+                            </div>--> 
 
         {% for key, message in app.session.getFlashes() %}
                             <div class="{{ key }}">
@@ -151,7 +151,25 @@
                         <script src="{{ asset('bundles/app/js/jquery.history.js') }}"></script>
                         <!-- application script for Charisma demo -->
                         <script src="{{ asset('bundles/app/js/charisma.js') }}"></script>
+<script type="text/javascript">
 
+$('#fos_user_registration_form_countryid').change( function() {
+    $.ajax({
+        type: "GET",
+        data: "data=" + $(this).val(),
+        url:"{{ path('_selectStates') }}",
+        success: function(msg){
+            if (msg != ''){
+               $('#fos_user_registration_form_stateid').html(msg).show();
+               }
+               else
+               {
+                   $('#fos_user_registration_form_stateid').html('<em>No item result</em>');
+               }
+           }
+       });
+  });
+    </script>
 
                     </body>
                 </html>
