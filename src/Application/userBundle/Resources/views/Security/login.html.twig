@@ -6,6 +6,7 @@
     <div class="well span5 center login-box">
         <div class="alert alert-info">
             Please login with your Username and Password.
+            {{ facebook_login_button({'autologoutlink': false}) }}
         </div>
             {% if error %}
         <div class="alert alert-error">

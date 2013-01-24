@@ -22,6 +22,7 @@ return array(
     'JMS\\DiExtraBundle' => $vendorDir . '/jms/di-extra-bundle/',
     'JMS\\AopBundle' => $vendorDir . '/jms/aop-bundle/',
     'FOS\\UserBundle' => $vendorDir . '/friendsofsymfony/user-bundle/',
+    'FOS\\FacebookBundle' => $vendorDir . '/friendsofsymfony/facebook-bundle/',
     'Doctrine\\ORM' => $vendorDir . '/doctrine/orm/lib/',
     'Doctrine\\DBAL' => $vendorDir . '/doctrine/dbal/lib/',
     'Doctrine\\Common' => $vendorDir . '/doctrine/common/lib/',

@@ -8,6 +8,9 @@ Application\AppBundle\Entity\Users:
             nullable: false
             generator:
                 strategy: IDENTITY
+        facebookId:
+            type: string
+            length: 255
         userfirstname:
             type: string
             length: 100

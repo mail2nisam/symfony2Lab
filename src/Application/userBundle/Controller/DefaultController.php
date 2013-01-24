@@ -26,5 +26,12 @@ class DefaultController extends Controller {
 
         return new Response($html);
     }
+    /**
+     * This method is only here to check the permissions for the firewall
+     * Don't delete - it's supposed to be empty
+     */
+    public function loginCheckAction() {
+        
+    }
 
 }

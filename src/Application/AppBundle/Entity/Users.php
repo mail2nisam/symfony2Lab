@@ -15,10 +15,7 @@ class Users extends BaseUser
      */
     protected $id;
 
-    /**
-     * @var integer $usertypeid
-     */
-    private $usertypeid;
+    protected  $facebookId ;
        
     /**
      * @var string $userfirstname
@@ -104,7 +101,41 @@ class Users extends BaseUser
     {
         return $this->id;
     }
+    
 
+    public function getFacebookId()
+    {
+        return $this->facebookId;
+    }
+
+    public function setFacebookId($facebookId)
+    {
+        $this->facebookId = $facebookId;
+        $this->setUsername($facebookId);
+        $this->salt = '';
+    }
+    
+    /**
+     * @param Array
+     */
+    public function setFBData($fbdata) // C'est dans cette méthode que vous ajouterez vos informations
+    {
+        //print_r($fbdata);exit;
+        if (isset($fbdata['id'])) {
+            $this->setFacebookId($fbdata['id']);
+            $this->addRole('ROLE_FACEBOOK');
+        }
+        if (isset($fbdata['first_name'])) {
+            $this->setUserfirstname($fbdata['first_name']);
+        }
+        if (isset($fbdata['last_name'])) {
+            $this->setUserlastname($fbdata['last_name']);
+        }
+        if (isset($fbdata['email'])) {
+            $this->setEmail($fbdata['email']);
+        }
+    }
+    
    /**
      * Set userfirstname
      *
